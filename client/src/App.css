@@ -122,22 +122,33 @@
 
 /* Resume panel */
 .resume-panel {
-  max-width: 900px;
+  max-width: 950px;
   width: 100%;
-  background: var(--color-bg-panel);
-  border-radius: 12px;
-  box-shadow: 0 4px 32px var(--color-panel-shadow);
-  padding: 40px;
+  background: rgba(35, 39, 47, 0.82);
+  border-radius: 18px;
+  border: 1.5px solid var(--color-panel-border);
+  box-shadow: 0 8px 40px 0 var(--color-panel-shadow), 0 1.5px 0 0 var(--color-accent-light);
+  padding: 48px 48px 40px 48px;
   color: var(--color-text-main);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: left;
   margin-top: 0;
+  backdrop-filter: blur(4px) saturate(1.7);
+  animation: panel-fade-in 1.1s cubic-bezier(0.4,0,0.2,1);
+  transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s cubic-bezier(0.4,0,0.2,1), border 0.3s cubic-bezier(0.4,0,0.2,1);
+  border-left: 1px solid var(--color-panel-shadow);
+  box-shadow: 0 8px 40px 0 var(--color-panel-shadow), 0 0.5px 0 0 var(--color-accent-light), -6px 0 8px -8px var(--color-accent);
+@keyframes panel-fade-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
 }
 .resume-panel h3 {
   margin-bottom: 8px;
   color: var(--color-accent);
+  position: relative;
 }
 .resume-panel p {
   color: var(--color-text-main);
