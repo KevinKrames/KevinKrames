@@ -1,58 +1,80 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 const data = {
   name: 'Kevin Krames',
-  title: 'Your Title',
+  title: 'Senior Full-Stack Software Developer',
   contact: {
-    email: 'your.email@example.com',
-    phone: '(123) 456-7890',
-    location: 'City, Country',
-    linkedin: 'linkedin.com/in/yourprofile',
-    github: 'github.com/yourusername',
+    email: 'kevinkrames@gmail.com',
+    location: 'Austin, TX 78705',
+    linkedin: 'www.linkedin.com/in/kevin-k-252189133/',
+    github: 'github.com/kevinkrames',
   },
-  summary: 'Experienced professional with a passion for technology and a proven track record in delivering high-quality solutions.',
+  summary: 'Full-Stack Solutions-minded Software Engineer with over 10 years of experience working in the front-end and back-end. From design to production, debugging and problem solving',
   skills: [
-    'JavaScript',
-    'React',
-    'Node.js',
-    'HTML/CSS',
-    'REST APIs',
-    'Git',
-    'Agile/Scrum',
+    'C#', 'PHP', 'Python', 'MySQL', 'Oracle', 'NoSQL', 'Git', 'Angular', 'Node.js', 'React.js', 'Vue.js', 'jQuery', 'Express.js', 'Kubernetes/Docker orchestration', 'REST APIs', 'Performance profiling', 'Jenkins/CI DevOps automation', 'AI Implementation', 'Prompt engineering', 'Collaboration', 'Agile methodology', 'Code review', 'Data encryption', 'Security best practices', 'OWASP penetration testing'
+  ],
+  languages: [
+    'C#', 'PHP', 'Python', 'MySQL', 'Oracle', 'NoSQL', 'Git', 'JavaScript', 'TypeScript', 'Java', 'C++', 'PowerShell'
   ],
   experience: [
     {
-      company: 'Company A',
-      role: 'Software Engineer',
-      period: '2022 - Present',
+      company: 'Infotech Inc.',
+      role: 'Senior Full-Stack Software Developer',
+      period: '04/2020 to Current',
       details: [
-        'Developed and maintained web applications using React and Node.js.',
-        'Collaborated with cross-functional teams to deliver projects on time.',
-        'Implemented best practices for code quality and performance.'
+        'Architected and delivered resilient, scalable full-stack web applications using JavaScript (ES6+), Python, and relational databases, supporting data-intensive business workflows.',
+        'Modernized legacy front-end applications to React, Vue, and Angular, improving performance, maintainability, accessibility, and developer maintainability.',
+        'Implemented secure, accessible, and responsive JavaScript standards, including OWASP top 10 and WCAG-aligned accessibility improvements.',
+        'Diagnosed and resolved production issues using profiling and performance tools, reducing MTTR and maintaining stable, high-availability user experiences.',
+        'Optimized relational databases (SQL Server, MySQL, Oracle) to support production-scale workloads (10k+ records), improving query performance and reliability.',
+        'Built and maintained CI/CD pipelines using Jenkins, AWS, and automated testing frameworks to ensure reliable deployments and consistent code quality.'
       ]
     },
     {
-      company: 'Company B',
-      role: 'Frontend Developer',
-      period: '2020 - 2022',
+      company: 'Infotech Inc.',
+      role: 'Full-Stack Software Developer',
+      period: '05/2018 to 04/2020',
       details: [
-        'Built responsive UI components with React.',
-        'Worked closely with designers to create user-friendly interfaces.'
+        'Hard work and dedication led to a promotion to Senior Full-Stack Software Developer in April 2020.',
+        'Full Stack Developer – C# .NET 8 Framework, SQL Server, Oracle, JavaScript/jQuery, Python',
+        'Developed and maintained web applications and supported data-intensive business workflows.',
+        'Championed and implemented new automated testing frameworks and CI/CD pipelines, improving code quality and deployment reliability which resulted in a 30% reduction in production issues and faster release cycles.',
+      ]
+    },
+    {
+      company: 'Gleim Publications Inc.',
+      role: 'Software Developer',
+      period: '02/2017 to 05/2018',
+      details: [
+        'Full Stack Developer – PHP, MySQL, JavaScript, CSS/HTML',
       ]
     }
   ],
   education: [
     {
-      school: 'University Name',
-      degree: 'B.Sc. in Computer Science',
-      period: '2016 - 2020'
+      school: 'University of Florida College of Engineering',
+      degree: 'BS, Computer Software Engineering',
+      period: '12/2016'
+    },
+    {
+      school: 'Santa Fe College',
+      degree: 'AA, Engineering',
+      period: '12/2013'
+    },
+    {
+      school: 'Santa Fe College',
+      degree: 'AS, Internet Services Technology',
+      period: '05/2011'
     }
-  ]
+  ],
+  references: [
+    { name: 'Available upon request' }
+  ],
 };
 
 function App() {
   return (
     <Router>
-      <div style={{ minHeight: '100vh', width: '100%', background: '#181a1b', position: 'relative' }}>
+      <div style={{ minHeight: '100vh', width: '100%', background: '#1a1a1a', position: 'relative', marginBottom: 24 }}>
         {/* Navbar */}
         <nav style={{ width: '100%', background: '#23272f', padding: '18px 0', boxShadow: '0 2px 8px #0003', position: 'fixed', top: 0, left: 0, zIndex: 10 }}>
           <div style={{ maxWidth: 900, margin: '0 auto', color: '#fff', fontSize: 28, fontWeight: 700, letterSpacing: 1, display: 'flex', alignItems: 'center' }}>
@@ -89,7 +111,30 @@ function App() {
         <div style={{ minHeight: 'calc(100vh - 90px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <Routes>
             <Route path="/" element={
-              <div style={{ maxWidth: 900, width: '100%', background: '#23272f', borderRadius: 12, boxShadow: '0 4px 32px #0006', padding: 40, color: '#f5f6fa', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div style={{ maxWidth: 900, width: '100%', background: '#23272f', borderRadius: 12, boxShadow: '0 4px 32px #0006', padding: 40, color: '#f5f6fa', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 120 }}>
+                {/* Download Resume Button */}
+                <a
+                  href="https://drive.usercontent.google.com/u/0/uc?id=16RATu39OAp-Z30AXYvHP2iQgwgUhESuX&export=download"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    marginBottom: 24,
+                    color: '#4dd0e1',
+                    background: 'none',
+                    border: '1px solid #4dd0e1',
+                    borderRadius: 4,
+                    padding: '6px 18px',
+                    fontSize: 16,
+                    fontWeight: 500,
+                    textDecoration: 'none',
+                    transition: 'background 0.2s, color 0.2s',
+                  }}
+                  onMouseEnter={e => { e.target.style.background = '#4dd0e1'; e.target.style.color = '#181a1b'; }}
+                  onMouseLeave={e => { e.target.style.background = 'none'; e.target.style.color = '#4dd0e1'; }}
+                >
+                  Download Resume (PDF)
+                </a>
                 {/* Header */}
                 <header style={{ borderBottom: '2px solid #333', marginBottom: 24, paddingBottom: 16, width: '100%', textAlign: 'center' }}>
                   <h1 style={{ margin: 0, fontSize: 36, color: '#fff' }}>{data.name}</h1>
@@ -100,7 +145,6 @@ function App() {
                   <strong>Contact:</strong>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, marginTop: 8, justifyContent: 'center' }}>
                     <span>Email: <a style={{ color: '#4dd0e1' }} href={`mailto:${data.contact.email}`}>{data.contact.email}</a></span>
-                    <span>Phone: {data.contact.phone}</span>
                     <span>Location: {data.contact.location}</span>
                     <span>LinkedIn: <a style={{ color: '#4dd0e1' }} href={`https://${data.contact.linkedin}`} target="_blank" rel="noopener noreferrer">{data.contact.linkedin}</a></span>
                     <span>GitHub: <a style={{ color: '#4dd0e1' }} href={`https://${data.contact.github}`} target="_blank" rel="noopener noreferrer">{data.contact.github}</a></span>
@@ -134,12 +178,21 @@ function App() {
                   ))}
                 </section>
                 {/* Education */}
-                <section style={{ width: '100%' }}>
+                <section style={{ marginBottom: 24,width: '100%' }}>
                   <h3 style={{ marginBottom: 8, color: '#4dd0e1' }}>Education</h3>
                   {data.education.map((edu, idx) => (
                     <div key={idx} style={{ marginBottom: 8 }}>
                       <div style={{ fontWeight: 600, color: '#fff' }}>{edu.degree}</div>
                       <div style={{ color: '#b0b3b8', fontSize: 14 }}>{edu.school} &mdash; {edu.period}</div>
+                    </div>
+                  ))}
+                </section>
+                {/* References */}
+                <section style={{ marginBottom: 24,width: '100%' }}>
+                  <h3 style={{ marginBottom: 8, color: '#4dd0e1' }}>References</h3>
+                  {data.references.map((ref, idx) => (
+                    <div key={idx} style={{ marginBottom: 8 }}>
+                      <div style={{ fontWeight: 600, color: '#fff' }}>{ref.name}</div>
                     </div>
                   ))}
                 </section>
@@ -158,6 +211,34 @@ function App() {
           </Routes>
         </div>
       </div>
+      {/* Footer */}
+      <footer style={{ width: '100%', maxWidth: 900, margin: '0 auto', marginTop: 32, padding: '16px 0', color: '#b0b3b8', textAlign: 'center' }}>
+        <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '16px 0' }} />
+        <a
+          href="https://drive.usercontent.google.com/u/0/uc?id=16RATu39OAp-Z30AXYvHP2iQgwgUhESuX&export=download"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-block',
+            marginBottom: 12,
+            color: '#4dd0e1',
+            background: 'none',
+            border: '1px solid #4dd0e1',
+            borderRadius: 4,
+            padding: '6px 18px',
+            fontSize: 16,
+            fontWeight: 500,
+            textDecoration: 'none',
+            transition: 'background 0.2s, color 0.2s',
+          }}
+          onMouseEnter={e => { e.target.style.background = '#4dd0e1'; e.target.style.color = '#181a1b'; }}
+          onMouseLeave={e => { e.target.style.background = 'none'; e.target.style.color = '#4dd0e1'; }}
+        >
+          Download Resume (PDF)
+        </a>
+        <br />
+        <span style={{ fontSize: 16 }}>&copy; Kevin Krames 2026</span>
+      </footer>
     </Router>
   );
 }
