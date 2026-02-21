@@ -2,7 +2,7 @@
 .app-bg {
   min-height: 100vh;
   width: 100%;
-  background: #1a1a1a;
+  background: var(--color-bg-main);
   position: relative;
   margin-bottom: 24px;
   padding-top: 70px; /* Height of navbar to prevent overlap */
@@ -11,9 +11,9 @@
 /* Navbar styles */
 .navbar {
   width: 100%;
-  background: #23272f;
+  background: var(--color-bg-panel);
   padding: 18px 0;
-  box-shadow: 0 2px 8px #0003;
+  box-shadow: 0 2px 8px var(--color-panel-shadow-light);
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@
 .navbar-inner {
   max-width: 900px;
   margin: 0 auto;
-  color: #fff;
+  color: var(--color-white);
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -38,21 +38,20 @@
   font-size: 18px;
 }
 .nav-link {
-  color: #4dd0e1;
+  color: var(--color-accent);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s, transform 0.2s, background 0.2s;
   padding: 4px 12px;
   border-radius: 4px;
   margin-right: 8px;
-  display: inline-block;
 }
 .nav-link:last-child {
   margin-right: 0;
 }
 .nav-link:hover {
-  color: #fff;
-  background: #4dd0e1;
+  color: var(--color-white);
+  background: var(--color-accent);
   transform: scale(1.08);
 }
 
@@ -69,25 +68,32 @@
 .resume-panel {
   max-width: 900px;
   width: 100%;
-  background: #23272f;
+  background: var(--color-bg-panel);
   border-radius: 12px;
-  box-shadow: 0 4px 32px #0006;
+  box-shadow: 0 4px 32px var(--color-panel-shadow);
   padding: 40px;
-  color: #f5f6fa;
+  color: var(--color-text-main);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: left;
   margin-top: 0;
 }
+.resume-panel h3 {
+  margin-bottom: 8px;
+  color: var(--color-accent);
+}
+.resume-panel p {
+  color: var(--color-text-main);
+}
 
 /* Download button */
 .download-btn {
   display: inline-block;
   margin-bottom: 24px;
-  color: #4dd0e1;
+  color: var(--color-accent);
   background: none;
-  border: 1px solid #4dd0e1;
+  border: 1px solid var(--color-accent);
   border-radius: 4px;
   padding: 6px 18px;
   font-size: 16px;
@@ -96,13 +102,13 @@
   transition: background 0.2s, color 0.2s;
 }
 .download-btn:hover {
-  background: #4dd0e1;
-  color: #181a1b;
+  background: var(--color-accent);
+  color: var(--color-skill-bg);
 }
 
 /* Resume header */
 .resume-header {
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid var(--color-panel-border);
   margin-bottom: 24px;
   padding-bottom: 16px;
   width: 100%;
@@ -111,71 +117,75 @@
 .resume-header h1 {
   margin: 0;
   font-size: 36px;
-  color: #fff;
+  color: var(--color-white);
 }
 .resume-header h2 {
   margin: 0;
   font-weight: 400;
-  color: #b0b3b8;
+  color: var(--color-accent-light);
   font-size: 22px;
 }
 
 /* Contact section */
 .resume-contact {
   margin-bottom: 24px;
-  color: #f5f6fa;
+  color: var(--color-text-main);
   width: 100%;
 }
 .resume-contact h3 {
   margin-bottom: 8px;
-  color: #4dd0e1;
+  color: var(--color-accent);
 }
 .contact-list {
+  color: var(--color-text-main);
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   margin-top: 8px;
-  justify-content: center;
+  color: var(--color-text-main);
 }
 .contact-list a {
-  color: #4dd0e1;
+  color: var(--color-accent);
 }
 
 /* Summary section */
 .resume-summary {
   margin-bottom: 24px;
   width: 100%;
+  color: var(--color-accent);
 }
 .resume-summary h3 {
   margin-bottom: 8px;
-  color: #4dd0e1;
+  color: var(--color-accent);
 }
 
 /* Skills section */
 .resume-skills {
   margin-bottom: 24px;
   width: 100%;
+  color: var(--color-accent);
 }
 .resume-skills h3 {
   margin-bottom: 8px;
-  color: #4dd0e1;
+  color: var(--color-accent);
 }
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   list-style: none;
-  padding: 0;
+  color: var(--color-accent);
   margin: 0;
   justify-content: center;
 }
 .skill-item {
-  background: #181a1b;
+  background: var(--color-skill-bg);
   border-radius: 4px;
   padding: 4px 12px;
   font-size: 15px;
-  color: #fff;
-  border: 1px solid #333;
+  color: var(--color-white);
+  border: 1px solid var(--color-panel-border);
 }
 
 /* Experience section */
@@ -185,25 +195,26 @@
 }
 .resume-experience h3 {
   margin-bottom: 8px;
-  color: #4dd0e1;
+  color: var(--color-accent);
 }
 .experience-item {
   margin-bottom: 16px;
+  color: var(--color-accent);
 }
 .experience-role {
   font-weight: 600;
-  color: #fff;
+  color: var(--color-white);
 }
 .experience-company {
-  color: #b0b3b8;
+  color: var(--color-accent-light);
   font-weight: 400;
 }
 .experience-period {
-  color: #b0b3b8;
+  color: var(--color-accent-light);
   font-size: 14px;
 }
 .experience-details {
-  margin: 8px 0 0 16px;
+  color: var(--color-text-main);
 }
 
 /* Education section */
@@ -214,17 +225,18 @@
 }
 .resume-education h3 {
   margin-bottom: 8px;
-  color: #4dd0e1;
+  color: var(--color-accent);
 }
 .education-item {
   margin-bottom: 8px;
+  color: var(--color-accent);
 }
 .education-degree {
   font-weight: 600;
-  color: #fff;
+  color: var(--color-white);
 }
 .education-school {
-  color: #b0b3b8;
+  color: var(--color-accent-light);
   font-size: 14px;
 }
 
@@ -235,36 +247,33 @@
 }
 .resume-references h3 {
   margin-bottom: 8px;
-  color: #4dd0e1;
+  color: var(--color-accent);
 }
 .reference-item {
   margin-bottom: 8px;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-white);
 }
 
 /* Projects page */
-.projects-section {
-  width: 100%;
-}
 .projects-coming-soon {
-  color: #b0b3b8;
+  color: var(--color-accent-light);
   font-size: 18px;
 }
 
-/* Footer styles */
+/* Footer */
 .footer {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   margin-top: 32px;
   padding: 16px 0;
-  color: #b0b3b8;
+  color: var(--color-accent-light);
   text-align: center;
 }
 .footer-separator {
   border: none;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--color-panel-border);
   margin: 16px 0;
 }
 .footer-copyright {
