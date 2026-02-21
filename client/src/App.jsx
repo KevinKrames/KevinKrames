@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import './App.css';
 const data = {
   name: 'Kevin Krames',
@@ -38,7 +40,7 @@ const data = {
         'Hard work and dedication led to a promotion to Senior Full-Stack Software Developer in April 2020.',
         'Full Stack Developer – C# .NET 8 Framework, SQL Server, Oracle, JavaScript/jQuery, Python',
         'Developed and maintained web applications and supported data-intensive business workflows.',
-        'Championed and implemented new automated testing frameworks and CI/CD pipelines, improving code quality and deployment reliability which resulted in a 30% reduction in production issues and faster release cycles.',
+        'Championed and implemented new automated testing frameworks and CI/CD pipelines, improving code quality and deployment reliability which resulted in a 30% reduction in production issues and faster release cycles.'
       ]
     },
     {
@@ -72,25 +74,21 @@ const data = {
   ],
 };
 
-function App() {
+const panelRef = React.createRef();
+
+function PanelRoutes() {
+  const location = useLocation();
   return (
-    <Router>
-      <div className="app-bg">
-        {/* Navbar */}
-        <nav className="navbar">
-          <div className="navbar-inner">
-            <div className="navbar-logo">
-              <span role="img" aria-label="logo" style={{fontSize: 32, marginRight: 12}}>💼</span>
-            </div>
-            <span className="navbar-title">{data.name}</span>
-            <div className="navbar-links">
-              <Link to="/" className="nav-link">Home</Link>
-              <Link to="/projects" className="nav-link">Projects</Link>
-            </div>
-          </div>
-        </nav>
-        <div className="main-content">
-          <Routes>
+    <SwitchTransition mode="out-in">
+      <CSSTransition
+        key={location.pathname}
+        classNames="panel-fade"
+        timeout={600}
+        unmountOnExit
+        nodeRef={panelRef}
+      >
+        <div ref={panelRef} className="main-content">
+          <Routes location={location}>
             <Route path="/" element={
               <div>
                 {/* Download Resume Button (moved outside panel) */}
@@ -180,7 +178,28 @@ function App() {
             } />
           </Routes>
         </div>
-      </div>
+      </CSSTransition>
+    </SwitchTransition>
+  );
+}
+
+function App() {
+  return (
+    <div className="app-bg">
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="navbar-inner">
+          <div className="navbar-logo">
+            <span role="img" aria-label="logo" style={{fontSize: 32, marginRight: 12}}>💼</span>
+          </div>
+          <span className="navbar-title">{data.name}</span>
+          <div className="navbar-links">
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/projects" className="nav-link">Projects</Link>
+          </div>
+        </div>
+      </nav>
+      <PanelRoutes />
       {/* Footer */}
       <footer className="footer">
         <hr className="footer-separator" />
@@ -205,8 +224,14 @@ function App() {
         <br />
         <span className="footer-copyright">&copy; Kevin Krames 2026</span>
       </footer>
-    </Router>
+    </div>
   );
 }
 
-export default App;
+export default function AppWithRouter() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
