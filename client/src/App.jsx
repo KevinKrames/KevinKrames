@@ -89,25 +89,27 @@ function App() {
   <div className="main-content">
           <Routes>
             <Route path="/" element={
-              <div className="resume-panel">
-                {/* Download Resume Button */}
+              <div>
+                {/* Download Resume Button (moved outside panel) */}
                 <a
                   href="https://drive.usercontent.google.com/u/0/uc?id=16RATu39OAp-Z30AXYvHP2iQgwgUhESuX&export=download"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="download-btn"
+                  style={{ marginBottom: 24, display: 'inline-block' }}
                 >
                   Download Resume (PDF)
                 </a>
-                {/* Header */}
-                <header className="resume-header">
-                  <h1>{data.name}</h1>
-                  <h2>{data.title}</h2>
-                </header>
-                {/* Contact */}
-                <section className="resume-contact">
-                  <h3>Contact</h3>
-                  <div className="contact-list">
+                <div className="resume-panel">
+                  {/* Header */}
+                  <header className="resume-header">
+                    <h1>{data.name}</h1>
+                    <h2>{data.title}</h2>
+                  </header>
+                  {/* Contact */}
+                  <section className="resume-contact">
+                    <h3>Contact</h3>
+                    <div className="contact-list">
                     <span>Email: <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a></span>
                     <span>Location: {data.contact.location}</span>
                     <span>LinkedIn: <a href={`https://${data.contact.linkedin}`} target="_blank" rel="noopener noreferrer">{data.contact.linkedin}</a></span>
@@ -160,6 +162,7 @@ function App() {
                     </div>
                   ))}
                 </section>
+                </div>
               </div>
             } />
             <Route path="/projects" element={
@@ -178,6 +181,16 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <hr className="footer-separator" />
+        <div className="footer-contact">
+          <span>Contact: </span>
+          <a href="mailto:kevinkrames@gmail.com">kevinkrames@gmail.com</a>
+          <span> | </span>
+          <span>Austin, TX 78705</span>
+          <span> | </span>
+          <a href="https://www.linkedin.com/in/kevin-k-252189133/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span> | </span>
+          <a href="https://github.com/kevinkrames" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
         <a
           href="https://drive.usercontent.google.com/u/0/uc?id=16RATu39OAp-Z30AXYvHP2iQgwgUhESuX&export=download"
           target="_blank"

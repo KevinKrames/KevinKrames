@@ -1,3 +1,16 @@
+/* Footer contact info */
+.footer-contact {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+.footer-contact a {
+  color: var(--color-accent);
+  text-decoration: none;
+  margin: 0 2px;
+}
+.footer-contact a:hover {
+  text-decoration: underline;
+}
 /* App background */
 .app-bg {
   min-height: 100vh;
