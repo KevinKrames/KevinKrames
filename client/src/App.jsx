@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
 const data = {
   name: 'Kevin Krames',
   title: 'Senior Full-Stack Software Developer',
@@ -74,137 +75,100 @@ const data = {
 function App() {
   return (
     <Router>
-      <div style={{ minHeight: '100vh', width: '100%', background: '#1a1a1a', position: 'relative', marginBottom: 24 }}>
+  <div className="app-bg">
         {/* Navbar */}
-        <nav style={{ width: '100%', background: '#23272f', padding: '18px 0', boxShadow: '0 2px 8px #0003', position: 'fixed', top: 0, left: 0, zIndex: 10 }}>
-          <div style={{ maxWidth: 900, margin: '0 auto', color: '#fff', fontSize: 28, fontWeight: 700, letterSpacing: 1, display: 'flex', alignItems: 'center' }}>
-            <span style={{ marginRight: 32 }}>{data.name}</span>
-            <div style={{ display: 'flex', gap: 24, fontSize: 18 }}>
-              <Link to="/" style={{
-                color: '#4dd0e1',
-                textDecoration: 'none',
-                fontWeight: 500,
-                transition: 'color 0.2s, transform 0.2s',
-                padding: '4px 12px',
-                borderRadius: 4,
-                marginRight: 8,
-                display: 'inline-block'
-              }}
-                onMouseEnter={e => { e.target.style.color = '#fff'; e.target.style.background = '#4dd0e1'; e.target.style.transform = 'scale(1.08)'; }}
-                onMouseLeave={e => { e.target.style.color = '#4dd0e1'; e.target.style.background = 'none'; e.target.style.transform = 'scale(1)'; }}
-              >Home</Link>
-              <Link to="/projects" style={{
-                color: '#4dd0e1',
-                textDecoration: 'none',
-                fontWeight: 500,
-                transition: 'color 0.2s, transform 0.2s',
-                padding: '4px 12px',
-                borderRadius: 4,
-                display: 'inline-block'
-              }}
-                onMouseEnter={e => { e.target.style.color = '#fff'; e.target.style.background = '#4dd0e1'; e.target.style.transform = 'scale(1.08)'; }}
-                onMouseLeave={e => { e.target.style.color = '#4dd0e1'; e.target.style.background = 'none'; e.target.style.transform = 'scale(1)'; }}
-              >Projects</Link>
+        <nav className="navbar">
+          <div className="navbar-inner">
+            <span className="navbar-title">{data.name}</span>
+            <div className="navbar-links">
+              <Link to="/" className="nav-link">Home</Link>
+              <Link to="/projects" className="nav-link">Projects</Link>
             </div>
           </div>
         </nav>
-        <div style={{ minHeight: 'calc(100vh - 90px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+  <div className="main-content">
           <Routes>
             <Route path="/" element={
-              <div style={{ maxWidth: 900, width: '100%', background: '#23272f', borderRadius: 12, boxShadow: '0 4px 32px #0006', padding: 40, color: '#f5f6fa', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 120 }}>
+              <div className="resume-panel">
                 {/* Download Resume Button */}
                 <a
                   href="https://drive.usercontent.google.com/u/0/uc?id=16RATu39OAp-Z30AXYvHP2iQgwgUhESuX&export=download"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    display: 'inline-block',
-                    marginBottom: 24,
-                    color: '#4dd0e1',
-                    background: 'none',
-                    border: '1px solid #4dd0e1',
-                    borderRadius: 4,
-                    padding: '6px 18px',
-                    fontSize: 16,
-                    fontWeight: 500,
-                    textDecoration: 'none',
-                    transition: 'background 0.2s, color 0.2s',
-                  }}
-                  onMouseEnter={e => { e.target.style.background = '#4dd0e1'; e.target.style.color = '#181a1b'; }}
-                  onMouseLeave={e => { e.target.style.background = 'none'; e.target.style.color = '#4dd0e1'; }}
+                  className="download-btn"
                 >
                   Download Resume (PDF)
                 </a>
                 {/* Header */}
-                <header style={{ borderBottom: '2px solid #333', marginBottom: 24, paddingBottom: 16, width: '100%', textAlign: 'center' }}>
-                  <h1 style={{ margin: 0, fontSize: 36, color: '#fff' }}>{data.name}</h1>
-                  <h2 style={{ margin: 0, fontWeight: 400, color: '#b0b3b8', fontSize: 22 }}>{data.title}</h2>
+                <header className="resume-header">
+                  <h1>{data.name}</h1>
+                  <h2>{data.title}</h2>
                 </header>
                 {/* Contact */}
-                <section style={{ marginBottom: 24, color: '#f5f6fa', width: '100%' }}>
-                  <strong>Contact:</strong>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, marginTop: 8, justifyContent: 'center' }}>
-                    <span>Email: <a style={{ color: '#4dd0e1' }} href={`mailto:${data.contact.email}`}>{data.contact.email}</a></span>
+                <section className="resume-contact">
+                  <h3>Contact</h3>
+                  <div className="contact-list">
+                    <span>Email: <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a></span>
                     <span>Location: {data.contact.location}</span>
-                    <span>LinkedIn: <a style={{ color: '#4dd0e1' }} href={`https://${data.contact.linkedin}`} target="_blank" rel="noopener noreferrer">{data.contact.linkedin}</a></span>
-                    <span>GitHub: <a style={{ color: '#4dd0e1' }} href={`https://${data.contact.github}`} target="_blank" rel="noopener noreferrer">{data.contact.github}</a></span>
+                    <span>LinkedIn: <a href={`https://${data.contact.linkedin}`} target="_blank" rel="noopener noreferrer">{data.contact.linkedin}</a></span>
+                    <span>GitHub: <a href={`https://${data.contact.github}`} target="_blank" rel="noopener noreferrer">{data.contact.github}</a></span>
                   </div>
                 </section>
                 {/* Summary */}
-                <section style={{ marginBottom: 24, width: '100%' }}>
-                  <h3 style={{ marginBottom: 8, color: '#4dd0e1' }}>Summary</h3>
-                  <p style={{ margin: 0 }}>{data.summary}</p>
+                <section className="resume-summary">
+                  <h3>Summary</h3>
+                  <p>{data.summary}</p>
                 </section>
                 {/* Skills */}
-                <section style={{ marginBottom: 24, width: '100%' }}>
-                  <h3 style={{ marginBottom: 8, color: '#4dd0e1' }}>Skills</h3>
-                  <ul style={{ display: 'flex', flexWrap: 'wrap', gap: 12, listStyle: 'none', padding: 0, margin: 0, justifyContent: 'center' }}>
+                <section className="resume-skills">
+                  <h3>Skills</h3>
+                  <ul className="skills-list">
                     {data.skills.map(skill => (
-                      <li key={skill} style={{ background: '#181a1b', borderRadius: 4, padding: '4px 12px', fontSize: 15, color: '#fff', border: '1px solid #333' }}>{skill}</li>
+                      <li key={skill} className="skill-item">{skill}</li>
                     ))}
                   </ul>
                 </section>
                 {/* Experience */}
-                <section style={{ marginBottom: 24, width: '100%' }}>
-                  <h3 style={{ marginBottom: 8, color: '#4dd0e1' }}>Experience</h3>
+                <section className="resume-experience">
+                  <h3>Experience</h3>
                   {data.experience.map((exp, idx) => (
-                    <div key={idx} style={{ marginBottom: 16 }}>
-                      <div style={{ fontWeight: 600, color: '#fff' }}>{exp.role} <span style={{ color: '#b0b3b8', fontWeight: 400 }}>@ {exp.company}</span></div>
-                      <div style={{ color: '#b0b3b8', fontSize: 14 }}>{exp.period}</div>
-                      <ul style={{ margin: '8px 0 0 16px' }}>
+                    <div key={idx} className="experience-item">
+                      <div className="experience-role">{exp.role} <span className="experience-company">@ {exp.company}</span></div>
+                      <div className="experience-period">{exp.period}</div>
+                      <ul className="experience-details">
                         {exp.details.map((d, i) => <li key={i}>{d}</li>)}
                       </ul>
                     </div>
                   ))}
                 </section>
                 {/* Education */}
-                <section style={{ marginBottom: 24,width: '100%' }}>
-                  <h3 style={{ marginBottom: 8, color: '#4dd0e1' }}>Education</h3>
+                <section className="resume-education">
+                  <h3>Education</h3>
                   {data.education.map((edu, idx) => (
-                    <div key={idx} style={{ marginBottom: 8 }}>
-                      <div style={{ fontWeight: 600, color: '#fff' }}>{edu.degree}</div>
-                      <div style={{ color: '#b0b3b8', fontSize: 14 }}>{edu.school} &mdash; {edu.period}</div>
+                    <div key={idx} className="education-item">
+                      <div className="education-degree">{edu.degree}</div>
+                      <div className="education-school">{edu.school} &mdash; {edu.period}</div>
                     </div>
                   ))}
                 </section>
                 {/* References */}
-                <section style={{ marginBottom: 24,width: '100%' }}>
-                  <h3 style={{ marginBottom: 8, color: '#4dd0e1' }}>References</h3>
+                <section className="resume-references">
+                  <h3>References</h3>
                   {data.references.map((ref, idx) => (
-                    <div key={idx} style={{ marginBottom: 8 }}>
-                      <div style={{ fontWeight: 600, color: '#fff' }}>{ref.name}</div>
+                    <div key={idx} className="reference-item">
+                      <div>{ref.name}</div>
                     </div>
                   ))}
                 </section>
               </div>
             } />
             <Route path="/projects" element={
-              <div style={{ maxWidth: 900, width: '100%', background: '#23272f', borderRadius: 12, boxShadow: '0 4px 32px #0006', padding: 40, color: '#f5f6fa', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <header style={{ borderBottom: '2px solid #333', marginBottom: 24, paddingBottom: 16, width: '100%', textAlign: 'center' }}>
-                  <h1 style={{ margin: 0, fontSize: 36, color: '#fff' }}>Projects</h1>
+              <div className="resume-panel">
+                <header className="resume-header">
+                  <h1>Projects</h1>
                 </header>
-                <section style={{ width: '100%' }}>
-                  <p style={{ color: '#b0b3b8', fontSize: 18 }}>Coming soon: A showcase of my projects.</p>
+                <section className="projects-section">
+                  <p className="projects-coming-soon">Coming soon: A showcase of my projects.</p>
                 </section>
               </div>
             } />
@@ -212,32 +176,18 @@ function App() {
         </div>
       </div>
       {/* Footer */}
-      <footer style={{ width: '100%', maxWidth: 900, margin: '0 auto', marginTop: 32, padding: '16px 0', color: '#b0b3b8', textAlign: 'center' }}>
-        <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '16px 0' }} />
+      <footer className="footer">
+        <hr className="footer-separator" />
         <a
           href="https://drive.usercontent.google.com/u/0/uc?id=16RATu39OAp-Z30AXYvHP2iQgwgUhESuX&export=download"
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            display: 'inline-block',
-            marginBottom: 12,
-            color: '#4dd0e1',
-            background: 'none',
-            border: '1px solid #4dd0e1',
-            borderRadius: 4,
-            padding: '6px 18px',
-            fontSize: 16,
-            fontWeight: 500,
-            textDecoration: 'none',
-            transition: 'background 0.2s, color 0.2s',
-          }}
-          onMouseEnter={e => { e.target.style.background = '#4dd0e1'; e.target.style.color = '#181a1b'; }}
-          onMouseLeave={e => { e.target.style.background = 'none'; e.target.style.color = '#4dd0e1'; }}
+          className="download-btn"
         >
           Download Resume (PDF)
         </a>
         <br />
-        <span style={{ fontSize: 16 }}>&copy; Kevin Krames 2026</span>
+        <span className="footer-copyright">&copy; Kevin Krames 2026</span>
       </footer>
     </Router>
   );
