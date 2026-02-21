@@ -24,14 +24,16 @@
 /* Navbar styles */
 .navbar {
   width: 100%;
-  background: rgba(35, 39, 47, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(35, 39, 47, 0.92);
+  backdrop-filter: blur(12px) saturate(1.2);
   padding: 0;
-  box-shadow: 0 4px 24px 0 var(--color-panel-shadow-light);
+  box-shadow: 0 8px 32px 0 var(--color-panel-shadow-light), 0 1.5px 0 0 var(--color-accent-light);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  animation: navbar-fade-in 0.8s cubic-bezier(0.4,0,0.2,1);
+  transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 .navbar-inner {
   max-width: 1100px;
@@ -44,8 +46,17 @@
   align-items: center;
   padding-left: 128px;
   height: 64px;
+  position: relative;
+  animation: navbar-slide-down 0.7s cubic-bezier(0.4,0,0.2,1);
+  filter: drop-shadow(0 2px 8px var(--color-panel-shadow));
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.navbar-logo:hover {
+  transform: scale(1.12) rotate(-6deg);
 }
 .navbar-title {
+  text-shadow: 0 2px 8px var(--color-panel-shadow-light);
+  transition: color 0.2s, text-shadow 0.3s;
   margin-right: 48px;
   font-size: 1.3em;
   font-weight: 800;
@@ -65,7 +76,10 @@
   border-radius: 6px;
   margin-right: 0;
   position: relative;
-  box-shadow: none;
+  box-shadow: 0 1.5px 0 0 var(--color-accent-light);
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(27, 201, 224, 0.2508) 0%, rgba(27, 201, 224, 0.158) 100%);
+  will-change: transform, box-shadow, background;
 }
 .nav-link:last-child {
   margin-right: 0;
@@ -73,12 +87,28 @@
 .nav-link:hover {
   color: var(--color-white);
   background: var(--color-accent);
-  box-shadow: 0 2px 8px 0 var(--color-panel-shadow-light);
-  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 4px 16px 0 var(--color-panel-shadow-light), 0 1.5px 0 0 var(--color-accent-light);
+  transform: translateY(-3px) scale(1.09) skewX(-2deg);
+  filter: brightness(1.08);
+  animation: navlink-pop 0.25s cubic-bezier(0.4,0,0.2,1);
   color: var(--color-white);
   background: var(--color-accent);
-  box-shadow: 0 2px 8px 0 var(--color-panel-shadow-light);
-  cursor: default;
+  box-shadow: 0 4px 16px 0 var(--color-panel-shadow-light), 0 1.5px 0 0 var(--color-accent-light);
+  filter: brightness(1.08);
+  
+  @keyframes navbar-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes navbar-slide-down {
+    from { transform: translateY(-32px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes navlink-pop {
+    0% { transform: scale(1) skewX(0deg); }
+    60% { transform: scale(1.13) skewX(-4deg); }
+    100% { transform: scale(1.09) skewX(-2deg); }
+  }
 }
 
 /* Main content area */
