@@ -24,7 +24,7 @@
 /* Navbar styles */
 .navbar {
   width: 100%;
-  background: rgba(35, 39, 47, 0.92);
+  background: var(--color-navbar-bg);
   backdrop-filter: blur(12px) saturate(1.2);
   padding: 0;
   box-shadow: 0 8px 32px 0 var(--color-panel-shadow-light), 0 1.5px 0 0 var(--color-accent-light);
@@ -78,7 +78,7 @@
   position: relative;
   box-shadow: 0 1.5px 0 0 var(--color-accent-light);
   overflow: hidden;
-  background: linear-gradient(90deg, rgba(27, 201, 224, 0.2508) 0%, rgba(27, 201, 224, 0.158) 100%);
+  background: var(--color-navlink-gradient);
   will-change: transform, box-shadow, background;
 }
 .nav-link:last-child {

@@ -1,5 +1,7 @@
 
 :root {
+  --color-navbar-bg: rgba(35, 39, 47, 0.92);
+  --color-navlink-gradient: linear-gradient(90deg, rgba(27, 201, 224, 0.25) 0%, rgba(27, 201, 224, 0.15) 100%);
   --color-bg-main: #1a1a1a;
   --color-bg-panel: #23272f;
   --color-accent: #4dd0e1;
