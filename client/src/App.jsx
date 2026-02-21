@@ -75,10 +75,13 @@ const data = {
 function App() {
   return (
     <Router>
-  <div className="app-bg">
+      <div className="app-bg">
         {/* Navbar */}
         <nav className="navbar">
           <div className="navbar-inner">
+            <div className="navbar-logo">
+              <span role="img" aria-label="logo" style={{fontSize: 32, marginRight: 12}}>💼</span>
+            </div>
             <span className="navbar-title">{data.name}</span>
             <div className="navbar-links">
               <Link to="/" className="nav-link">Home</Link>
@@ -86,7 +89,7 @@ function App() {
             </div>
           </div>
         </nav>
-  <div className="main-content">
+        <div className="main-content">
           <Routes>
             <Route path="/" element={
               <div>
