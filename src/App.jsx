@@ -350,7 +350,11 @@ function App() {
           <span> | </span>
           <span>
             <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 0-12 0c0 3.31 2.69 6 6 6s6-2.69 6-6zm-6 8c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.5-2.5c.83 0 1.5-.67 1.5-1.5S17.33 11 16.5 11 15 11.67 15 12.5s.67 1.5 1.5 1.5z" fill="#0077B5"/></svg>
+              
+              <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="6" fill="#0077B5"/>
+                <path d="M9.5 13.5h3v9h-3v-9zm1.5-1.5c.966 0 1.5-.65 1.5-1.462C12.5 9.65 11.966 9 11 9c-.967 0-1.5.65-1.5 1.538C9.5 11.35 10.033 12 11 12zm4 1.5h2.8v1.2h.04c.39-.74 1.34-1.52 2.76-1.52 2.95 0 3.5 1.94 3.5 4.46v5.34h-3v-4.74c0-1.13-.02-2.58-1.57-2.58-1.57 0-1.81 1.23-1.81 2.5v4.82h-3v-9z" fill="#fff"/>
+              </svg>
             </span>
             <a href="https://www.linkedin.com/in/kevin-k-252189133/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </span>
