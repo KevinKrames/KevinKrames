@@ -12,13 +12,7 @@ const data = {
     linkedin: 'www.linkedin.com/in/kevin-k-252189133/',
     github: 'github.com/kevinkrames',
   },
-  summary: 'Full-Stack Solutions-minded Software Engineer with over 10 years of experience working in the front-end and back-end. From design to production, debugging and problem solving',
-  skills: [
-    'C#', 'PHP', 'Python', 'MySQL', 'Oracle', 'NoSQL', 'Git', 'Angular', 'Node.js', 'React.js', 'Vue.js', 'jQuery', 'Express.js', 'Kubernetes/Docker orchestration', 'REST APIs', 'Performance profiling', 'Jenkins/CI DevOps automation', 'AI Implementation', 'Prompt engineering', 'Collaboration', 'Agile methodology', 'Code review', 'Data encryption', 'Security best practices', 'OWASP penetration testing'
-  ],
-  languages: [
-    'C#', 'PHP', 'Python', 'MySQL', 'Oracle', 'NoSQL', 'Git', 'JavaScript', 'TypeScript', 'Java', 'C++', 'PowerShell'
-  ],
+  summary: 'Full-Stack Solutions-minded Software Engineer with over 10 years of experience working in the front-end and back-end. From design to production, debugging and problem solving.',
   experience: [
     {
       company: 'Infotech Inc.',
