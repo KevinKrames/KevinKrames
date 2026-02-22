@@ -119,25 +119,25 @@ function PanelRoutes() {
                     <div className="contact-list">
                     <span>
                       <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
                       </span>
                       Email: <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a>
                     </span>
                     <span>
                       <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M12 19c-4.418 0-8-1.79-8-4V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8c0 2.21-3.582 4-8 4z"/></svg>
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M12 19c-4.418 0-8-1.79-8-4V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8c0 2.21-3.582 4-8 4z"/></svg>
                       </span>
                       Location: {data.contact.location}
                     </span>
                     <span>
                       <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 0-12 0c0 3.31 2.69 6 6 6s6-2.69 6-6zm-6 8c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.5-2.5c.83 0 1.5-.67 1.5-1.5S17.33 11 16.5 11 15 11.67 15 12.5s.67 1.5 1.5 1.5z" fill="#0077B5"/></svg>
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 0-12 0c0 3.31 2.69 6 6 6s6-2.69 6-6zm-6 8c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.5-2.5c.83 0 1.5-.67 1.5-1.5S17.33 11 16.5 11 15 11.67 15 12.5s.67 1.5 1.5 1.5z" fill="#0077B5"/></svg>
                       </span>
                       LinkedIn: <a href={`https://${data.contact.linkedin}`} target="_blank" rel="noopener noreferrer">{data.contact.linkedin}</a>
                     </span>
                     <span>
                       <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 3.59 8 8 8s8-3.59 8-8c0-5.52-4.48-10-8-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm1 2c-1.1 0-2 .9-2 2v6h2v-6h2v6h2v-6c0-1.1-.9-2-2-2z" fill="#181717"/></svg>
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 3.59 8 8 8s8-3.59 8-8c0-5.52-4.48-10-8-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm1 2c-1.1 0-2 .9-2 2v6h2v-6h2v6h2v-6c0-1.1-.9-2-2-2z" fill="#181717"/></svg>
                       </span>
                       GitHub: <a href={`https://${data.contact.github}`} target="_blank" rel="noopener noreferrer">{data.contact.github}</a>
                     </span>
@@ -336,30 +336,31 @@ function App() {
         <div className="footer-contact">
           <span>
             <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
             </span>
             <a href="mailto:kevinkrames@gmail.com">kevinkrames@gmail.com</a>
           </span>
           <span> | </span>
           <span>
             <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M12 19c-4.418 0-8-1.79-8-4V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8c0 2.21-3.582 4-8 4z"/></svg>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M12 19c-4.418 0-8-1.79-8-4V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8c0 2.21-3.582 4-8 4z"/></svg>
             </span>
             Austin, TX 78705
           </span>
           <span> | </span>
           <span>
             <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 0-12 0c0 3.31 2.69 6 6 6s6-2.69 6-6zm-6 8c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.5-2.5c.83 0 1.5-.67 1.5-1.5S17.33 11 16.5 11 15 11.67 15 12.5s.67 1.5 1.5 1.5z" fill="#0077B5"/></svg>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 0-12 0c0 3.31 2.69 6 6 6s6-2.69 6-6zm-6 8c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.5-2.5c.83 0 1.5-.67 1.5-1.5S17.33 11 16.5 11 15 11.67 15 12.5s.67 1.5 1.5 1.5z" fill="#0077B5"/></svg>
             </span>
             <a href="https://www.linkedin.com/in/kevin-k-252189133/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </span>
           <span> | </span>
           <span>
             <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 3.59 8 8 8s8-3.59 8-8c0-5.52-4.48-10-8-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1.07-7.75c-.15.03-.32.05-.5.05-.18 0-.35-.02-.5-.05-.15-.03-.29-.09-.41-.17-.12-.08-.23-.18-.32-.29-.09-.11-.16-.24-.21-.38-.05-.14-.08-.29-.08-.45 0-.16.03-.31.08-.45.05-.14.12-.27.21-.38.09-.11.2-.21.32-.29.12-.08.26-.14.41-.17.15-.03.32-.05.5-.05.18 0 .35.02.5.05.15.03.29.09.41.17.12.08.23.18.32.29.09.11.16.24.21.38.05.14.08.29.08.45 0 .16-.03.31-.08.45-.05.14-.12.27-.21.38-.09.11-.2.21-.32.29-.12.08-.26.14-.41.17z" fill="#fff"/>
-                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 3.59 8 8 8s8-3.59 8-8c0-5.52-4.48-10-8-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm1 2c-1.1 0-2 .9-2 2v6h2v-6h2v6h2v-6c0-1.1-.9-2-2-2z" fill="#181717"/>
+              <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="#fff"/>
+                <path d="M18.5 24v-2.5c0-.7-.2-1.2-.6-1.7 2.1-.2 4.3-1 4.3-4.7 0-1-.3-1.8-.9-2.5.1-.2.4-1.1-.1-2.3 0 0-.7-.2-2.3.9-.7-.2-1.5-.3-2.3-.3s-1.6.1-2.3.3c-1.6-1.1-2.3-.9-2.3-.9-.5 1.2-.2 2.1-.1 2.3-.6.7-.9 1.5-.9 2.5 0 3.7 2.2 4.5 4.3 4.7-.2.2-.4.5-.5.9-.2.4-.3.9-.3 1.4V24" stroke="#181717" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12.5 22.5c-.1.2-.4.3-.7.2-.3-.1-.5-.4-.4-.6.1-.2.4-.3.7-.2.3.1.5.4.4.6zm1.5.3c-.1.2-.4.2-.7.1-.3-.1-.5-.3-.4-.5.1-.2.4-.2.7-.1.3.1.5.3.4.5zm1.5.2c0 .2-.2.4-.5.4-.3 0-.6-.2-.6-.4 0-.2.2-.4.5-.4.3 0 .6.2.6.4z" fill="#181717"/>
               </svg>
             </span>
             <a href="https://github.com/kevinkrames" target="_blank" rel="noopener noreferrer">GitHub</a>
