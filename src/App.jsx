@@ -13,6 +13,17 @@ const data = {
     github: 'github.com/kevinkrames',
   },
   summary: 'Full-Stack Solutions-minded Software Engineer with over 10 years of experience working in the front-end and back-end. From design to production, debugging and problem solving.',
+  skills: {
+    languages: [
+      'C#', 'PHP', 'Python', 'MySQL', 'Oracle', 'NoSQL/MongoDB', 'JavaScript/TypeScript', 'Java', 'C++', 'PowerShell'
+    ],
+    frameworks: [
+      'Angular', 'Node.js', 'React.js', 'Vue.js', 'jQuery', 'Express.js', 'Apache JMeter', 'Node.js', 'D3.js'
+    ],
+    tools: [
+      'Jenkins/CI DevOps automation','Git/Github Actions', 'REST APIs', 'Performance profiling', 'Kubernetes/Docker',  'AI API Orchestration', 'Prompt engineering', 'Agile methodology',  'Design Leading', 'Code Review','Pair Programming', 'SHA256 Salt/Data encryption', 'Accessibility/Screen Readers', 'OWASP penetration testing'
+    ]
+  },
   experience: [
     {
       company: 'Infotech Inc.',
@@ -106,10 +117,30 @@ function PanelRoutes() {
                   <section className="resume-contact resume-section-card">
                     <h3>Contact</h3>
                     <div className="contact-list">
-                    <span>Email: <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a></span>
-                    <span>Location: {data.contact.location}</span>
-                    <span>LinkedIn: <a href={`https://${data.contact.linkedin}`} target="_blank" rel="noopener noreferrer">{data.contact.linkedin}</a></span>
-                    <span>GitHub: <a href={`https://${data.contact.github}`} target="_blank" rel="noopener noreferrer">{data.contact.github}</a></span>
+                    <span>
+                      <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                      </span>
+                      Email: <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a>
+                    </span>
+                    <span>
+                      <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M12 19c-4.418 0-8-1.79-8-4V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8c0 2.21-3.582 4-8 4z"/></svg>
+                      </span>
+                      Location: {data.contact.location}
+                    </span>
+                    <span>
+                      <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 0-12 0c0 3.31 2.69 6 6 6s6-2.69 6-6zm-6 8c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.5-2.5c.83 0 1.5-.67 1.5-1.5S17.33 11 16.5 11 15 11.67 15 12.5s.67 1.5 1.5 1.5z" fill="#0077B5"/></svg>
+                      </span>
+                      LinkedIn: <a href={`https://${data.contact.linkedin}`} target="_blank" rel="noopener noreferrer">{data.contact.linkedin}</a>
+                    </span>
+                    <span>
+                      <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 3.59 8 8 8s8-3.59 8-8c0-5.52-4.48-10-8-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm1 2c-1.1 0-2 .9-2 2v6h2v-6h2v6h2v-6c0-1.1-.9-2-2-2z" fill="#181717"/></svg>
+                      </span>
+                      GitHub: <a href={`https://${data.contact.github}`} target="_blank" rel="noopener noreferrer">{data.contact.github}</a>
+                    </span>
                   </div>
                 </section>
                 {/* Summary */}
@@ -122,19 +153,19 @@ function PanelRoutes() {
                   <h3>Skills</h3>
                   <div className="skills-category">Languages</div>
                   <ul className="skills-list">
-                    {['C#', 'PHP', 'Python', 'MySQL', 'Oracle', 'NoSQL/MongoDB', 'JavaScript/TypeScript', 'Java', 'C++', 'PowerShell'].map(skill => (
+                    {data.skills.languages.map(skill => (
                       <li key={skill} className="skill-badge">{skill}</li>
                     ))}
                   </ul>
                   <div className="skills-category">Frameworks & Libraries</div>
                   <ul className="skills-list">
-                    {['Angular', 'Node.js', 'React.js', 'Vue.js', 'jQuery', 'Express.js', 'Apache JMeter', 'Node.js', 'D3.js'].map(skill => (
+                    {data.skills.frameworks.map(skill => (
                       <li key={skill} className="skill-badge">{skill}</li>
                     ))}
                   </ul>
                   <div className="skills-category">Tools & Other</div>
                   <ul className="skills-list">
-                    {['Jenkins/CI DevOps automation','Git/Github Actions', 'REST APIs', 'Performance profiling', 'Kubernetes/Docker',  'AI API Orchestration', 'Prompt engineering', 'Agile methodology',  'Design Leading', 'Code Review','Pair Programming', 'SHA256 Salt/Data encryption', 'Accessibility/Screen Readers', 'OWASP penetration testing'].map(skill => (
+                    {data.skills.tools.map(skill => (
                       <li key={skill} className="skill-badge">{skill}</li>
                     ))}
                   </ul>
@@ -303,14 +334,36 @@ function App() {
       <footer className="footer">
         <hr className="footer-separator" />
         <div className="footer-contact">
-          <span>Contact: </span>
-          <a href="mailto:kevinkrames@gmail.com">kevinkrames@gmail.com</a>
+          <span>
+            <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+            </span>
+            <a href="mailto:kevinkrames@gmail.com">kevinkrames@gmail.com</a>
+          </span>
           <span> | </span>
-          <span>Austin, TX 78705</span>
+          <span>
+            <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M12 19c-4.418 0-8-1.79-8-4V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8c0 2.21-3.582 4-8 4z"/></svg>
+            </span>
+            Austin, TX 78705
+          </span>
           <span> | </span>
-          <a href="https://www.linkedin.com/in/kevin-k-252189133/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span>
+            <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 0-12 0c0 3.31 2.69 6 6 6s6-2.69 6-6zm-6 8c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.5-2.5c.83 0 1.5-.67 1.5-1.5S17.33 11 16.5 11 15 11.67 15 12.5s.67 1.5 1.5 1.5z" fill="#0077B5"/></svg>
+            </span>
+            <a href="https://www.linkedin.com/in/kevin-k-252189133/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </span>
           <span> | </span>
-          <a href="https://github.com/kevinkrames" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span>
+            <span style={{verticalAlign: 'middle', marginRight: '6px'}}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 3.59 8 8 8s8-3.59 8-8c0-5.52-4.48-10-8-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1.07-7.75c-.15.03-.32.05-.5.05-.18 0-.35-.02-.5-.05-.15-.03-.29-.09-.41-.17-.12-.08-.23-.18-.32-.29-.09-.11-.16-.24-.21-.38-.05-.14-.08-.29-.08-.45 0-.16.03-.31.08-.45.05-.14.12-.27.21-.38.09-.11.2-.21.32-.29.12-.08.26-.14.41-.17.15-.03.32-.05.5-.05.18 0 .35.02.5.05.15.03.29.09.41.17.12.08.23.18.32.29.09.11.16.24.21.38.05.14.08.29.08.45 0 .16-.03.31-.08.45-.05.14-.12.27-.21.38-.09.11-.2.21-.32.29-.12.08-.26.14-.41.17z" fill="#fff"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 3.59 8 8 8s8-3.59 8-8c0-5.52-4.48-10-8-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm1 2c-1.1 0-2 .9-2 2v6h2v-6h2v6h2v-6c0-1.1-.9-2-2-2z" fill="#181717"/>
+              </svg>
+            </span>
+            <a href="https://github.com/kevinkrames" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </span>
         </div>
         <a
           href="https://drive.usercontent.google.com/u/0/uc?id=16RATu39OAp-Z30AXYvHP2iQgwgUhESuX&export=download"
