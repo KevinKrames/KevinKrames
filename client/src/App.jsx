@@ -172,7 +172,7 @@ function PanelRoutes() {
                   <h1>Projects</h1>
                 </header>
                 <section className="projects-section">
-                  <p className="projects-coming-soon">Coming soon: A showcase of my projects.</p>
+                  <ProjectsTabs />
                 </section>
               </div>
             } />
@@ -180,6 +180,80 @@ function PanelRoutes() {
         </div>
       </CSSTransition>
     </SwitchTransition>
+  );
+}
+
+function ProjectsTabs() {
+  const [activeTab, setActiveTab] = React.useState(0);
+  const projects = [
+    {
+      title: 'AI Chatbot Platform',
+      description: 'A scalable chatbot platform using Node.js, React, and OpenAI APIs. Supports custom workflows and integrations.',
+      image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+      link: '#',
+      technologies: ['Node.js', 'React', 'OpenAI API', 'Express', 'MongoDB'],
+      workDone: [
+        'Designed and implemented conversational flows using OpenAI GPT models.',
+        'Built a React frontend for real-time chat and admin controls.',
+        'Integrated Node.js backend with Express for RESTful APIs.',
+        'Connected MongoDB for persistent chat history and user data.',
+        'Deployed on AWS with CI/CD pipeline.'
+      ],
+      integration: 'Frontend communicates with backend via REST APIs. OpenAI API is used for generating responses. MongoDB stores chat logs. Admin dashboard allows workflow customization.'
+    },
+    {
+      title: 'DevOps Dashboard',
+      description: 'A real-time dashboard for CI/CD pipelines, Kubernetes clusters, and cloud resources. Built with React and D3.js.',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80',
+      link: '#',
+      technologies: ['React', 'D3.js', 'Kubernetes', 'Jenkins', 'AWS'],
+      workDone: [
+        'Developed interactive visualizations using D3.js.',
+        'Integrated real-time data from Jenkins and Kubernetes APIs.',
+        'Built authentication and role-based access with AWS Cognito.',
+        'Created alerting and notification system for pipeline failures.',
+        'Implemented responsive design for mobile and desktop.'
+      ],
+      integration: 'Dashboard fetches data from Jenkins and Kubernetes APIs. D3.js renders charts. AWS Cognito manages user authentication. Alerts are sent via email and Slack.'
+    },
+  ];
+  const proj = projects[activeTab];
+  return (
+    <div className="projects-tabs">
+      <div className="tabs">
+        {projects.map((proj, idx) => (
+          <button
+            key={proj.title}
+            className={`tab-btn${activeTab === idx ? ' active' : ''}`}
+            onClick={() => setActiveTab(idx)}
+          >
+            {proj.title}
+          </button>
+        ))}
+      </div>
+      <div className="tab-content">
+        <img src={proj.image} alt={proj.title} className="project-img" />
+        <h2>{proj.title}</h2>
+        <p>{proj.description}</p>
+        <div className="project-tech">
+          <strong>Technologies:</strong>
+          <ul>
+            {proj.technologies.map(tech => <li key={tech}>{tech}</li>)}
+          </ul>
+        </div>
+        <div className="project-work">
+          <strong>Work Done:</strong>
+          <ul>
+            {proj.workDone.map((item, idx) => <li key={idx}>{item}</li>)}
+          </ul>
+        </div>
+        <div className="project-integration">
+          <strong>Integration Example:</strong>
+          <p>{proj.integration}</p>
+        </div>
+        <a href={proj.link} className="project-link">View Project</a>
+      </div>
+    </div>
   );
 }
 
