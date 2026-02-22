@@ -159,6 +159,105 @@
   animation: navbar-fade-in 0.8s cubic-bezier(0.4,0,0.2,1);
   transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s cubic-bezier(0.4,0,0.2,1);
 }
+/* Hamburger styles */
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-left: 12px;
+  z-index: 1100;
+}
+.hamburger-icon {
+  width: 28px;
+  height: 22px;
+  display: inline-block;
+  position: relative;
+}
+.hamburger-icon::before,
+.hamburger-icon::after,
+.hamburger-icon {
+  content: '';
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.hamburger-icon::before {
+  top: 2px;
+  left: 2px;
+  width: 48px;
+  height: 46px;
+}
+.hamburger-icon {
+  position:absolute;
+  top: 2px;
+  left: 2px;
+  width: 48px;
+  height: 48px;
+}
+.navbar-hamburger {
+  position:absolute;
+  top: 2px;
+  left: 2px;
+  width: 54px;
+  height: 54px;
+}
+.hamburger-icon::after {
+  top: 2px;
+  left: 2px;
+  width: 48px;
+  height: 48px;
+}
+.navbar-hamburger.open .hamburger-icon {
+  background: transparent;
+}
+.navbar-hamburger.open .hamburger-icon::before {
+  transform: translateY(9px) rotate(45deg);
+}
+.navbar-hamburger.open .hamburger-icon::after {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 700px) {
+  .navbar-inner {
+    padding-left: 16px;
+  }
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--color-navbar-bg);
+    box-shadow: 0 8px 32px 0 var(--color-panel-shadow-light);
+    padding: 16px 0;
+    animation: panel-fade-in 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+  .navbar-links.open {
+    display: flex;
+  }
+  .navbar-hamburger {
+    display: block;
+  }
+}
+@media (min-width: 701px) {
+  .navbar-hamburger {
+    display: none !important;
+  }
+  .navbar-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}
 .navbar-inner {
   max-width: 1100px;
   margin: 0 auto;

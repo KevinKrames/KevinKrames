@@ -257,22 +257,38 @@ function ProjectsTabs() {
   );
 }
 
+function Navbar() {
+  const [open, setOpen] = React.useState(false);
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 700) setOpen(false);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  return (
+    <nav className="navbar">
+      <div className="navbar-inner">
+        <div className="navbar-logo">
+          <span role="img" aria-label="logo" style={{fontSize: 32, marginRight: 12}}>💼</span>
+        </div>
+        <span className="navbar-title">{data.name}</span>
+        <button className="navbar-hamburger" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+          <span className="hamburger-icon"></span>
+        </button>
+        <div className={`navbar-links${open ? ' open' : ''}`}>
+          <Link to="/" className="nav-link" onClick={() => setOpen(false)}>Home</Link>
+          <Link to="/projects" className="nav-link" onClick={() => setOpen(false)}>Projects</Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
 function App() {
   return (
     <div className="app-bg">
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <div className="navbar-logo">
-            <span role="img" aria-label="logo" style={{fontSize: 32, marginRight: 12}}>💼</span>
-          </div>
-          <span className="navbar-title">{data.name}</span>
-          <div className="navbar-links">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/projects" className="nav-link">Projects</Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
       <PanelRoutes />
       {/* Footer */}
       <footer className="footer">
