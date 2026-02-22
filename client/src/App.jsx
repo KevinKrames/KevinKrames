@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import './App.css';
+import jimboImg from './assets/jimbo.png';
 const data = {
   name: 'Kevin Krames',
   title: 'Senior Full-Stack Software Developer',
@@ -187,34 +188,30 @@ function ProjectsTabs() {
   const [activeTab, setActiveTab] = React.useState(0);
   const projects = [
     {
-      title: 'AI Chatbot Platform',
-      description: 'A scalable chatbot platform using Node.js, React, and OpenAI APIs. Supports custom workflows and integrations.',
-      image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+      title: 'Automatic Sitcom Twitch Stream',
+      description: 'A Twitch streaming bot that generates and performs an improvised sitcom using AI based on Twitch chat interactions. Built with Python, Unity, and Twitch API integration.',
+      image: jimboImg,
       link: '#',
-      technologies: ['Node.js', 'React', 'OpenAI API', 'Express', 'MongoDB'],
+      technologies: ['OpenAI ChatGPT API', 'Python', 'Batch Scripting', 'C#', 'PyTorch', 'RabbitMQ', 'Unity', 'Twitch API Integration', 'Blender 3D Modeling'],
       workDone: [
-        'Designed and implemented conversational flows using OpenAI GPT models.',
-        'Built a React frontend for real-time chat and admin controls.',
-        'Integrated Node.js backend with Express for RESTful APIs.',
-        'Connected MongoDB for persistent chat history and user data.',
-        'Deployed on AWS with CI/CD pipeline.'
+        'Designed and implemented worflow orchestration using RabbitMQ to manage interactions between five separate components: Twitch chat, OpenAI API, Voice AI synthesis, OBS Twitch Stream, and Unity game engine.',
+        'Orchestrated prompt engineered conversational flows using OpenAI GPT models to generate dynamic sitcom narratives based on Twitch chat interactions.',
+        'Built a Unity game to visualize the sitcom narrative with 3D character models, animations, and voice synthesis.',
+        'Optimized existing opensource AI models to improve performance from 30 minutes to as quick as 30 seconds, enabling real-time interactions during Twitch streams.',
+        'Loaded tensorflow-based voice synthesis models into memory and implemented a queuing system to generate character dialogue in real-time during Twitch streams.'
       ],
-      integration: 'Frontend communicates with backend via REST APIs. OpenAI API is used for generating responses. MongoDB stores chat logs. Admin dashboard allows workflow customization.'
+      integration: 'Twitch user askes for an episode made about a birthday party. Within 30 seconds, the system generates a script, verifies it adheres to content guidelines, generates character dialogue, and produces a 3D animated sitcom episode in real-time during Twitch streams.'
     },
     {
-      title: 'DevOps Dashboard',
-      description: 'A real-time dashboard for CI/CD pipelines, Kubernetes clusters, and cloud resources. Built with React and D3.js.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80',
+      title: 'More to Come',
+      description: 'More to Come',
+      image: jimboImg,
       link: '#',
-      technologies: ['React', 'D3.js', 'Kubernetes', 'Jenkins', 'AWS'],
+      technologies: ['More to Come'],
       workDone: [
-        'Developed interactive visualizations using D3.js.',
-        'Integrated real-time data from Jenkins and Kubernetes APIs.',
-        'Built authentication and role-based access with AWS Cognito.',
-        'Created alerting and notification system for pipeline failures.',
-        'Implemented responsive design for mobile and desktop.'
+        'More to Come',
       ],
-      integration: 'Dashboard fetches data from Jenkins and Kubernetes APIs. D3.js renders charts. AWS Cognito manages user authentication. Alerts are sent via email and Slack.'
+      integration: 'More to Come'
     },
   ];
   const proj = projects[activeTab];
@@ -251,7 +248,6 @@ function ProjectsTabs() {
           <strong>Integration Example:</strong>
           <p>{proj.integration}</p>
         </div>
-        <a href={proj.link} className="project-link">View Project</a>
       </div>
     </div>
   );
