@@ -187,28 +187,28 @@
   transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 .hamburger-icon::before {
-  top: 2px;
-  left: 2px;
+  top: 5px;
+  left: 5px;
   width: 48px;
   height: 46px;
 }
 .hamburger-icon {
   position:absolute;
-  top: 2px;
-  left: 2px;
+  top: 3px;
+  left: 3px;
   width: 48px;
   height: 48px;
 }
 .navbar-hamburger {
   position:absolute;
-  top: 2px;
-  left: 2px;
+  top: 5px;
+  left: 5px;
   width: 54px;
   height: 54px;
 }
 .hamburger-icon::after {
-  top: 2px;
-  left: 2px;
+  top: 5px;
+  left: 5px;
   width: 48px;
   height: 48px;
 }

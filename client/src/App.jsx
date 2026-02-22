@@ -274,9 +274,15 @@ function Navbar() {
         </div>
         <span className="navbar-title">{data.name}</span>
         <button className="navbar-hamburger" onClick={() => setOpen(!open)} aria-label="Toggle menu">
-          <span className="hamburger-icon"></span>
+          <span className="hamburger-icon" aria-hidden="true">
+            <svg width="28" height="42" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="2" width="28" height="5.5" rx="1.75" fill="currentColor" />
+              <rect y="11" width="28" height="5.5" rx="1.75" fill="currentColor" />
+              <rect y="20" width="28" height="5.5" rx="1.75" fill="currentColor" />
+            </svg>
+          </span>
         </button>
-        <div className={`navbar-links${open ? ' open' : ''}`}>
+        <div className={`navbar-links${open ? ' open' : ''}`}> 
           <Link to="/" className="nav-link" onClick={() => setOpen(false)}>Home</Link>
           <Link to="/projects" className="nav-link" onClick={() => setOpen(false)}>Projects</Link>
         </div>
