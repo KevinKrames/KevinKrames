@@ -524,16 +524,26 @@
 }
 
 /* Experience section */
-.resume-experience {
-  margin-bottom: 24px;
+/* Card/panel style for section separation */
+.resume-section-card {
+  background: var(--color-bg-panel);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 var(--color-panel-shadow-light), 0 1.5px 0 0 var(--color-accent-light);
+  padding: 32px 28px 24px 28px;
+  margin-bottom: 40px;
+  margin-top: 32px;
   width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: box-shadow 0.2s;
 }
-.resume-experience h3 {
-  margin-bottom: 8px;
+.resume-section-card h3 {
+  margin-bottom: 12px;
   color: var(--color-accent);
 }
 .experience-item {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   color: var(--color-accent);
 }
 .experience-role {

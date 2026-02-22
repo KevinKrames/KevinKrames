@@ -109,7 +109,7 @@ function PanelRoutes() {
                     <h2>{data.title}</h2>
                   </header>
                   {/* Contact */}
-                  <section className="resume-contact">
+                  <section className="resume-contact resume-section-card">
                     <h3>Contact</h3>
                     <div className="contact-list">
                     <span>Email: <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a></span>
@@ -119,12 +119,12 @@ function PanelRoutes() {
                   </div>
                 </section>
                 {/* Summary */}
-                <section className="resume-summary">
+                <section className="resume-summary resume-section-card">
                   <h3>Summary</h3>
                   <p>{data.summary}</p>
                 </section>
                 {/* Skills */}
-                <section className="resume-skills">
+                <section className="resume-skills resume-section-card">
                   <h3>Skills</h3>
                   <ul className="skills-list">
                     {data.skills.map(skill => (
@@ -133,7 +133,7 @@ function PanelRoutes() {
                   </ul>
                 </section>
                 {/* Experience */}
-                <section className="resume-experience">
+                <section className="resume-experience resume-section-card">
                   <h3>Experience</h3>
                   {data.experience.map((exp, idx) => (
                     <div key={idx} className="experience-item">
@@ -146,7 +146,7 @@ function PanelRoutes() {
                   ))}
                 </section>
                 {/* Education */}
-                <section className="resume-education">
+                <section className="resume-education resume-section-card">
                   <h3>Education</h3>
                   {data.education.map((edu, idx) => (
                     <div key={idx} className="education-item">
@@ -156,7 +156,7 @@ function PanelRoutes() {
                   ))}
                 </section>
                 {/* References */}
-                <section className="resume-references">
+                <section className="resume-references resume-section-card">
                   <h3>References</h3>
                   {data.references.map((ref, idx) => (
                     <div key={idx} className="reference-item">
