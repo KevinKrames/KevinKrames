@@ -228,6 +228,8 @@
   }
   .navbar-links {
     display: none;
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
     top: 64px;
     left: 0;
@@ -236,10 +238,13 @@
     background: var(--color-navbar-bg);
     box-shadow: 0 8px 32px 0 var(--color-panel-shadow-light);
     padding: 16px 0;
-    animation: panel-fade-in 0.5s cubic-bezier(0.4,0,0.2,1);
+    transition: opacity 0.3s;
   }
   .navbar-links.open {
     display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    animation: panel-fade-in 0.5s cubic-bezier(0.4,0,0.2,1);
   }
   .navbar-hamburger {
     display: block;
