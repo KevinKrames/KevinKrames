@@ -513,6 +513,39 @@
   color: var(--color-accent);
   margin: 0;
   justify-content: center;
+  padding: 0;
+}
+
+.skill-badge {
+  display: inline-block;
+  background: rgba(77, 208, 225, 0.13);
+  border: 1.5px solid var(--color-accent-light);
+  color: var(--color-accent);
+  border-radius: 999px;
+  padding: 6px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-right: 0;
+  box-shadow: 0 1px 6px var(--color-panel-shadow-light);
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.skill-badge:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+}
+.skills-category {
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: var(--color-accent-light);
+  font-size: 1.08em;
+  text-align: left;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 5px;
+  margin-right: auto;
+}
 }
 .skill-item {
   background: var(--color-skill-bg);

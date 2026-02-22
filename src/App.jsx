@@ -126,9 +126,22 @@ function PanelRoutes() {
                 {/* Skills */}
                 <section className="resume-skills resume-section-card">
                   <h3>Skills</h3>
+                  <div className="skills-category">Languages</div>
                   <ul className="skills-list">
-                    {data.skills.map(skill => (
-                      <li key={skill} className="skill-item">{skill}</li>
+                    {['C#', 'PHP', 'Python', 'MySQL', 'Oracle', 'NoSQL/MongoDB', 'JavaScript/TypeScript', 'Java', 'C++', 'PowerShell'].map(skill => (
+                      <li key={skill} className="skill-badge">{skill}</li>
+                    ))}
+                  </ul>
+                  <div className="skills-category">Frameworks & Libraries</div>
+                  <ul className="skills-list">
+                    {['Angular', 'Node.js', 'React.js', 'Vue.js', 'jQuery', 'Express.js', 'Apache JMeter', 'Node.js', 'D3.js'].map(skill => (
+                      <li key={skill} className="skill-badge">{skill}</li>
+                    ))}
+                  </ul>
+                  <div className="skills-category">Tools & Other</div>
+                  <ul className="skills-list">
+                    {['Jenkins/CI DevOps automation','Git/Github Actions', 'REST APIs', 'Performance profiling', 'Kubernetes/Docker',  'AI API Orchestration', 'Prompt engineering', 'Agile methodology',  'Design Leading', 'Code Review','Pair Programming', 'SHA256 Salt/Data encryption', 'Accessibility/Screen Readers', 'OWASP penetration testing'].map(skill => (
+                      <li key={skill} className="skill-badge">{skill}</li>
                     ))}
                   </ul>
                 </section>
